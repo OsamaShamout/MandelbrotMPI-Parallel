@@ -1,0 +1,63 @@
+Computation time: 0.003625 seconds
+Iteration Number: 0
+0 0 0 0 0 0 0 0 0 0 
+Computation time: 0.409006 seconds
+Iteration Number: 500
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 0.757340 seconds
+Iteration Number: 1000
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 1.106664 seconds
+Iteration Number: 1500
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 1.455580 seconds
+Iteration Number: 2000
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 1.804873 seconds
+Iteration Number: 2500
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 2.156240 seconds
+Iteration Number: 3000
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 2.506252 seconds
+Iteration Number: 3500
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 2.850570 seconds
+Iteration Number: 4000
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 3.204131 seconds
+Iteration Number: 4500
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 3.553947 seconds
+Iteration Number: 5000
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 3.916071 seconds
+Iteration Number: 5500
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 4.258762 seconds
+Iteration Number: 6000
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 4.610435 seconds
+Iteration Number: 6500
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 4.968228 seconds
+Iteration Number: 7000
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 5.309558 seconds
+Iteration Number: 7500
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 5.662912 seconds
+Iteration Number: 8000
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 6.012009 seconds
+Iteration Number: 8500
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 6.487138 seconds
+Iteration Number: 9000
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 6.861011 seconds
+Iteration Number: 9500
+1 1 1 1 1 1 1 1 1 1 
+Computation time: 7.156751 seconds
+Iteration Number: 10000
+1 1 1 1 1 1 1 1 1 1 

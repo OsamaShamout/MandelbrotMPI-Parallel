@@ -1,0 +1,156 @@
+Process 1
+	Calc: 0.113284 s
+	Wait: 0.183106 s
+	Comm: 0.001445 s
+Process 0
+	Calc: 0.296354 s
+	Wait: 0.000031 s
+	Comm: 0.001558 s
+Writing mandelbrot1.ppm
+Process 1
+	Calc: 0.348299 s
+	Wait: 0.000038 s
+	Comm: 0.000741 s
+Process 2
+	Calc: 0.002946 s
+	Wait: 0.345418 s
+	Comm: 0.000854 s
+Process 0
+	Calc: 0.076355 s
+	Wait: 0.271903 s
+	Comm: 0.000936 s
+Writing mandelbrot1.ppm
+Process 1
+	Calc: 0.278892 s
+	Wait: 0.000070 s
+	Comm: 0.001369 s
+Process 2
+	Calc: 0.116453 s
+	Wait: 0.162515 s
+	Comm: 0.001479 s
+Process 3
+	Calc: 0.002082 s
+	Wait: 0.276871 s
+	Comm: 0.001576 s
+Process 0
+	Calc: 0.036498 s
+	Wait: 0.242438 s
+	Comm: 0.001666 s
+Writing mandelbrot1.ppm
+Process 1
+	Calc: 0.151187 s
+	Wait: 0.157886 s
+	Comm: 0.000451 s
+Process 2
+	Calc: 0.309001 s
+	Wait: 0.000072 s
+	Comm: 0.000530 s
+Process 3
+	Calc: 0.002687 s
+	Wait: 0.306406 s
+	Comm: 0.000617 s
+Process 4
+	Calc: 0.001655 s
+	Wait: 0.307480 s
+	Comm: 0.000711 s
+Process 0
+	Calc: 0.010082 s
+	Wait: 0.298974 s
+	Comm: 0.000766 s
+Writing mandelbrot1.ppm
+Process 1
+	Calc: 0.094519 s
+	Wait: 0.182046 s
+	Comm: 0.001117 s
+Process 2
+	Calc: 0.276634 s
+	Wait: 0.000052 s
+	Comm: 0.001253 s
+Process 3
+	Calc: 0.142985 s
+	Wait: 0.133728 s
+	Comm: 0.001327 s
+Process 4
+	Calc: 0.006777 s
+	Wait: 0.269830 s
+	Comm: 0.001398 s
+Process 5
+	Calc: 0.001322 s
+	Wait: 0.275405 s
+	Comm: 0.001481 s
+Process 0
+	Calc: 0.004067 s
+	Wait: 0.272602 s
+	Comm: 0.001526 s
+Writing mandelbrot1.ppm
+Process 1
+	Calc: 0.067236 s
+	Wait: 0.198312 s
+	Comm: 0.001324 s
+Process 2
+	Calc: 0.171463 s
+	Wait: 0.094108 s
+	Comm: 0.001411 s
+Process 3
+	Calc: 0.265516 s
+	Wait: 0.000022 s
+	Comm: 0.001579 s
+Process 4
+	Calc: 0.027669 s
+	Wait: 0.237919 s
+	Comm: 0.001681 s
+Process 5
+	Calc: 0.005533 s
+	Wait: 0.259950 s
+	Comm: 0.001742 s
+Process 0
+	Calc: 0.010414 s
+	Wait: 0.255014 s
+	Comm: 0.001816 s
+Writing mandelbrot1.ppm
+Process 6
+	Calc: 0.005149 s
+	Wait: 0.260271 s
+	Comm: 0.001812 s
+Process 5
+	Calc: 0.001443 s
+	Wait: 0.268073 s
+	Comm: 0.001089 s
+Process 7
+	Calc: 0.000979 s
+	Wait: 0.268538 s
+	Comm: 0.001126 s
+Process 3
+	Calc: 0.269300 s
+	Wait: 0.000072 s
+	Comm: 0.001265 s
+Process 1
+	Calc: 0.045885 s
+	Wait: 0.223567 s
+	Comm: 0.001292 s
+Process 6
+	Calc: 0.004754 s
+	Wait: 0.264612 s
+	Comm: 0.001476 s
+Process 2
+	Calc: 0.125905 s
+	Wait: 0.143475 s
+	Comm: 0.001689 s
+Process 0
+	Calc: 0.006805 s
+	Wait: 0.262594 s
+	Comm: 0.001787 s
+Writing mandelbrot1.ppm
+Process 4
+	Calc: 0.154343 s
+	Wait: 0.115151 s
+	Comm: 0.001799 s
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.43260/1/vader_segment.Osamas-MacBook-Pro.501.454f0001.5
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------

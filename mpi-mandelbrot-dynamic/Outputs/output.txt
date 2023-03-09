@@ -1,0 +1,4921 @@
+
+Dynamic MPI mandelbrot algorithm
+
+usage: ./mandelbrot [options]
+
+OPTIONS:
+    -h                   Shows this help.
+    -c {width}           Width of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -r {height}          Height of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -n {iterations}      Maximum number of iterations for each pixel. Has to be
+                         positive integer (default: 2000)
+    -o {filename}        Filename of resulting bitmap. (default: ./mandelbrot.bmp)
+    -b {blocksize}       Number of rows to be assigned to a slave at once.
+                         Has to be smaller than (height/slave-count).
+                         Has to be a divisor of height. (default: 1)
+    -x {offset}          X-offset from [0,0]. (default: 0)
+    -y {offset}          Y-offset from [0,0]. (default: 0)
+    -a {length}          Absolute value range of x/y-axis, e.g. if length was 2, 
+                         displayed x/y-values would range from -1 to 1. 
+                         If the x/y-offsets are set, axis shifts by those offsets.
+                         Negative value inverts axis.
+                         Has to be non-zero double value. (default: 2)
+    -p {hexnum}          Minimum color of the resulting image. (default: 0x000000)
+    -q {hexnum}          Maximum color of the resulting image. (default: 0xffffff)
+    -m {hexnum}          Hex mask to manipulate color ranges. (default: 0xffffff)
+    -s                   Print progress of the computation.
+
+Error: argument of '-n' has to be greater than zero.
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[27965,1],1]
+  Exit code:    1
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.143649 sec.
+
+Finished. Communication finished in 0.139886 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       1000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.270191 sec.
+
+Finished. Communication finished in 0.266405 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       1500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.397636 sec.
+
+Finished. Communication finished in 0.393753 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       2000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.524358 sec.
+
+Finished. Communication finished in 0.520647 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       2500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.65132 sec.
+
+Finished. Communication finished in 0.646613 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       3000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.778267 sec.
+
+Finished. Communication finished in 0.773426 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       3500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.904163 sec.
+
+Finished. Communication finished in 0.899541 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       4000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 1.03173 sec.
+
+Finished. Communication finished in 1.02675 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       4500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 1.15692 sec.
+
+Finished. Communication finished in 1.15281 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       5000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 1.28449 sec.
+
+Finished. Communication finished in 1.27994 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       5500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 1.41044 sec.
+
+Finished. Communication finished in 1.40559 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       6000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 1.53707 sec.
+
+Finished. Communication finished in 1.53308 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       6500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 1.66365 sec.
+
+Finished. Communication finished in 1.65846 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       7000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 1.81045 sec.
+
+Finished. Communication finished in 1.8058 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       7500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 1.91952 sec.
+
+Finished. Communication finished in 1.91463 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       8000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 2.04718 sec.
+
+Finished. Communication finished in 2.04279 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       8500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 2.17389 sec.
+
+Finished. Communication finished in 2.16891 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       9000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 2.30867 sec.
+
+Finished. Communication finished in 2.30449 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       9500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 2.42853 sec.
+
+Finished. Communication finished in 2.42422 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       10000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 2.55179 sec.
+
+Finished. Communication finished in 2.54684 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+
+Dynamic MPI mandelbrot algorithm
+
+usage: ./mandelbrot [options]
+
+OPTIONS:
+    -h                   Shows this help.
+    -c {width}           Width of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -r {height}          Height of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -n {iterations}      Maximum number of iterations for each pixel. Has to be
+                         positive integer (default: 2000)
+    -o {filename}        Filename of resulting bitmap. (default: ./mandelbrot.bmp)
+    -b {blocksize}       Number of rows to be assigned to a slave at once.
+                         Has to be smaller than (height/slave-count).
+                         Has to be a divisor of height. (default: 1)
+    -x {offset}          X-offset from [0,0]. (default: 0)
+    -y {offset}          Y-offset from [0,0]. (default: 0)
+    -a {length}          Absolute value range of x/y-axis, e.g. if length was 2, 
+                         displayed x/y-values would range from -1 to 1. 
+                         If the x/y-offsets are set, axis shifts by those offsets.
+                         Negative value inverts axis.
+                         Has to be non-zero double value. (default: 2)
+    -p {hexnum}          Minimum color of the resulting image. (default: 0x000000)
+    -q {hexnum}          Maximum color of the resulting image. (default: 0xffffff)
+    -m {hexnum}          Hex mask to manipulate color ranges. (default: 0xffffff)
+    -s                   Print progress of the computation.
+
+Error: argument of '-n' has to be greater than zero.
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[27970,1],2]
+  Exit code:    1
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.074577 sec.
+
+Finished. Communication finished in 0.070865 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       1000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.140901 sec.
+
+Finished. Communication finished in 0.137146 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       1500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.206282 sec.
+
+Finished. Communication finished in 0.202037 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       2000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.272328 sec.
+
+Finished. Communication finished in 0.268177 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       2500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.337721 sec.
+
+Finished. Communication finished in 0.333595 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       3000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.403008 sec.
+
+Finished. Communication finished in 0.398662 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       3500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.468758 sec.
+
+Finished. Communication finished in 0.464717 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       4000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.534626 sec.
+
+Finished. Communication finished in 0.530489 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       4500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.601533 sec.
+
+Finished. Communication finished in 0.596712 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       5000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.665973 sec.
+
+Finished. Communication finished in 0.661544 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       5500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.730934 sec.
+
+Finished. Communication finished in 0.726732 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       6000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.79655 sec.
+
+Finished. Communication finished in 0.792048 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       6500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.863747 sec.
+
+Finished. Communication finished in 0.859252 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       7000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.927972 sec.
+
+Finished. Communication finished in 0.923399 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       7500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.993562 sec.
+
+Finished. Communication finished in 0.989063 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       8000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 1.06139 sec.
+
+Finished. Communication finished in 1.0567 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       8500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 1.12522 sec.
+
+Finished. Communication finished in 1.12074 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       9000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 1.19035 sec.
+
+Finished. Communication finished in 1.18585 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       9500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 1.25619 sec.
+
+Finished. Communication finished in 1.2516 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       10000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 1.32378 sec.
+
+Finished. Communication finished in 1.31972 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+
+Dynamic MPI mandelbrot algorithm
+
+usage: ./mandelbrot [options]
+
+OPTIONS:
+    -h                   Shows this help.
+    -c {width}           Width of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -r {height}          Height of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -n {iterations}      Maximum number of iterations for each pixel. Has to be
+                         positive integer (default: 2000)
+    -o {filename}        Filename of resulting bitmap. (default: ./mandelbrot.bmp)
+    -b {blocksize}       Number of rows to be assigned to a slave at once.
+                         Has to be smaller than (height/slave-count).
+                         Has to be a divisor of height. (default: 1)
+    -x {offset}          X-offset from [0,0]. (default: 0)
+    -y {offset}          Y-offset from [0,0]. (default: 0)
+    -a {length}          Absolute value range of x/y-axis, e.g. if length was 2, 
+                         displayed x/y-values would range from -1 to 1. 
+                         If the x/y-offsets are set, axis shifts by those offsets.
+                         Negative value inverts axis.
+                         Has to be non-zero double value. (default: 2)
+    -p {hexnum}          Minimum color of the resulting image. (default: 0x000000)
+    -q {hexnum}          Maximum color of the resulting image. (default: 0xffffff)
+    -m {hexnum}          Hex mask to manipulate color ranges. (default: 0xffffff)
+    -s                   Print progress of the computation.
+
+Error: argument of '-n' has to be greater than zero.
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[27880,1],3]
+  Exit code:    1
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.050353 sec.
+
+Finished. Communication finished in 0.046636 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       1000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.094137 sec.
+
+Finished. Communication finished in 0.090377 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       1500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.138352 sec.
+
+Finished. Communication finished in 0.134554 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       2000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.181902 sec.
+
+Finished. Communication finished in 0.177674 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       2500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.225672 sec.
+
+Finished. Communication finished in 0.221561 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       3000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.269799 sec.
+
+Finished. Communication finished in 0.2655 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       3500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.313681 sec.
+
+Finished. Communication finished in 0.309358 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       4000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.356856 sec.
+
+Finished. Communication finished in 0.352749 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       4500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.400957 sec.
+
+Finished. Communication finished in 0.396703 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       5000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.444809 sec.
+
+Finished. Communication finished in 0.440394 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       5500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.488215 sec.
+
+Finished. Communication finished in 0.483706 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       6000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.53191 sec.
+
+Finished. Communication finished in 0.527437 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       6500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.57649 sec.
+
+Finished. Communication finished in 0.572161 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       7000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.619517 sec.
+
+Finished. Communication finished in 0.615395 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       7500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.663253 sec.
+
+Finished. Communication finished in 0.659005 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       8000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.712119 sec.
+
+Finished. Communication finished in 0.706889 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       8500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.750772 sec.
+
+Finished. Communication finished in 0.746468 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       9000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.795028 sec.
+
+Finished. Communication finished in 0.790825 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       9500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.839256 sec.
+
+Finished. Communication finished in 0.834885 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       10000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.882047 sec.
+
+Finished. Communication finished in 0.877395 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+
+Dynamic MPI mandelbrot algorithm
+
+usage: ./mandelbrot [options]
+
+OPTIONS:
+    -h                   Shows this help.
+    -c {width}           Width of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -r {height}          Height of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -n {iterations}      Maximum number of iterations for each pixel. Has to be
+                         positive integer (default: 2000)
+    -o {filename}        Filename of resulting bitmap. (default: ./mandelbrot.bmp)
+    -b {blocksize}       Number of rows to be assigned to a slave at once.
+                         Has to be smaller than (height/slave-count).
+                         Has to be a divisor of height. (default: 1)
+    -x {offset}          X-offset from [0,0]. (default: 0)
+    -y {offset}          Y-offset from [0,0]. (default: 0)
+    -a {length}          Absolute value range of x/y-axis, e.g. if length was 2, 
+                         displayed x/y-values would range from -1 to 1. 
+                         If the x/y-offsets are set, axis shifts by those offsets.
+                         Negative value inverts axis.
+                         Has to be non-zero double value. (default: 2)
+    -p {hexnum}          Minimum color of the resulting image. (default: 0x000000)
+    -q {hexnum}          Maximum color of the resulting image. (default: 0xffffff)
+    -m {hexnum}          Hex mask to manipulate color ranges. (default: 0xffffff)
+    -s                   Print progress of the computation.
+
+Error: argument of '-n' has to be greater than zero.
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[27758,1],2]
+  Exit code:    1
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.041545 sec.
+
+Finished. Communication finished in 0.037477 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       1000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.079539 sec.
+
+Finished. Communication finished in 0.072522 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       1500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.112079 sec.
+
+Finished. Communication finished in 0.107881 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       2000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.151515 sec.
+
+Finished. Communication finished in 0.144133 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       2500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.181929 sec.
+
+Finished. Communication finished in 0.177815 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       3000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.218485 sec.
+
+Finished. Communication finished in 0.214262 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       3500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.252567 sec.
+
+Finished. Communication finished in 0.248035 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       4000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.288741 sec.
+
+Finished. Communication finished in 0.284467 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       4500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.326406 sec.
+
+Finished. Communication finished in 0.322005 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       5000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.358556 sec.
+
+Finished. Communication finished in 0.354162 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       5500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.392888 sec.
+
+Finished. Communication finished in 0.38829 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33322/1/vader_segment.Osamas-MacBook-Pro.501.6f990001.0
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       6000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.42974 sec.
+
+Finished. Communication finished in 0.425297 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       6500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.464777 sec.
+
+Finished. Communication finished in 0.460351 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       7000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.506452 sec.
+
+Finished. Communication finished in 0.49588 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       7500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.534079 sec.
+
+Finished. Communication finished in 0.529388 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33350/1/vader_segment.Osamas-MacBook-Pro.501.6ff50001.3
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       8000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.571119 sec.
+
+Finished. Communication finished in 0.565887 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       8500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.606055 sec.
+
+Finished. Communication finished in 0.601463 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33364/1/vader_segment.Osamas-MacBook-Pro.501.6fe70001.3
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       9000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.641353 sec.
+
+Finished. Communication finished in 0.636737 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       9500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.676111 sec.
+
+Finished. Communication finished in 0.671305 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       10000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.710499 sec.
+
+Finished. Communication finished in 0.705767 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+
+Dynamic MPI mandelbrot algorithm
+
+usage: ./mandelbrot [options]
+
+OPTIONS:
+    -h                   Shows this help.
+    -c {width}           Width of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -r {height}          Height of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -n {iterations}      Maximum number of iterations for each pixel. Has to be
+                         positive integer (default: 2000)
+    -o {filename}        Filename of resulting bitmap. (default: ./mandelbrot.bmp)
+    -b {blocksize}       Number of rows to be assigned to a slave at once.
+                         Has to be smaller than (height/slave-count).
+                         Has to be a divisor of height. (default: 1)
+    -x {offset}          X-offset from [0,0]. (default: 0)
+    -y {offset}          Y-offset from [0,0]. (default: 0)
+    -a {length}          Absolute value range of x/y-axis, e.g. if length was 2, 
+                         displaError: argument of '-n' has to be greater than zero.
+yed x/y-values would range from -1 to 1. 
+                         If the x/y-offsets are set, axis shifts by those offsets.
+                         Negative value inverts axis.
+                         Has to be non-zero double value. (default: 2)
+    -p {hexnum}          Minimum color of the resulting image. (default: 0x000000)
+    -q {hexnum}          Maximum color of the resulting image. (default: 0xffffff)
+    -m {hexnum}          Hex mask to manipulate color ranges. (default: 0xffffff)
+    -s                   Print progress of the computation.
+
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33393/1/vader_segment.Osamas-MacBook-Pro.501.6fc20001.4
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[28610,1],3]
+  Exit code:    1
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33393] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33393] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.041194 sec.
+
+Finished. Communication finished in 0.033378 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       1000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.06989 sec.
+
+Finished. Communication finished in 0.061417 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33409/1/vader_segment.Osamas-MacBook-Pro.501.6f320001.3
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33409] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33409] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       1500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.102245 sec.
+
+Finished. Communication finished in 0.091935 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33417/1/vader_segment.Osamas-MacBook-Pro.501.6f3a0001.2
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33417] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33417] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       2000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.126102 sec.
+
+Finished. Communication finished in 0.118761 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       2500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.169335 sec.
+
+Finished. Communication finished in 0.161596 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       3000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.191273 sec.
+
+Finished. Communication finished in 0.180855 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       3500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.218415 sec.
+
+Finished. Communication finished in 0.211136 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       4000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.245101 sec.
+
+Finished. Communication finished in 0.237952 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       4500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.277986 sec.
+
+Finished. Communication finished in 0.269636 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33465/1/vader_segment.Osamas-MacBook-Pro.501.6f0a0001.1
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       5000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.30642 sec.
+
+Finished. Communication finished in 0.298725 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       5500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.338061 sec.
+
+Finished. Communication finished in 0.330505 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       6000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.364448 sec.
+
+Finished. Communication finished in 0.356255 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       6500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.390887 sec.
+
+Finished. Communication finished in 0.385956 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       7000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.423119 sec.
+
+Finished. Communication finished in 0.415214 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       7500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.456996 sec.
+
+Finished. Communication finished in 0.447323 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       8000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.489996 sec.
+
+Finished. Communication finished in 0.485036 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33522/1/vader_segment.Osamas-MacBook-Pro.501.6f410001.4
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       8500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.512534 sec.
+
+Finished. Communication finished in 0.504255 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       9000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.54867 sec.
+
+Finished. Communication finished in 0.531558 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       9500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.578731 sec.
+
+Finished. Communication finished in 0.56469 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33546/1/vader_segment.Osamas-MacBook-Pro.501.6eb90001.2
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       10000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.596925 sec.
+
+Finished. Communication finished in 0.592098 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33554/1/vader_segment.Osamas-MacBook-Pro.501.6ea10001.0
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+
+Dynamic MPI mandelbrot algorithm
+
+usage: ./mandelbrot [options]
+
+OPTIONS:
+    -h                   Shows this help.
+    -c {width}           Width of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -r {height}          Height of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -n {iterations}      Maximum number of iterations for each pixel. Has to be
+                         positive integer (default: 2000)
+    -o {filename}        Filename of resulting bitmap. (default: ./mandelbrot.bmp)
+    -b {blocksize}       Number of rows to be assigned to a slave at once.
+                         Has to be smaller than (height/slave-count).
+                         Has to be a divisor of height. (default: 1)
+    -x {offset}          X-offset from [0,0]. (default: 0)
+    -y {offset}          Y-offset from [0,0]. (default: 0)
+    -a {length}          Absolute value range of x/y-axis, e.g. if length was 2, 
+                         displaError: argument of '-n' has to be greater than zero.
+yed x/y-values would range from -1 to 1. 
+                         If the x/y-offsets are set, axis shifts by those offsets.
+                         Negative value inverts axis.
+                         Has to be non-zero double value. (default: 2)
+    -p {hexnum}          Minimum color of the resulting image. (default: 0x000000)
+    -q {hexnum}          Maximum color of the resulting image. (default: 0xffffff)
+    -m {hexnum}          Hex mask to manipulate color ranges. (default: 0xffffff)
+    -s                   Print progress of the computation.
+
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33562/1/vader_segment.Osamas-MacBook-Pro.501.6ea90001.6
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[28329,1],4]
+  Exit code:    1
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.091981 sec.
+
+Finished. Communication finished in 0.082269 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33571/1/vader_segment.Osamas-MacBook-Pro.501.6e900001.1
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       1000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.061452 sec.
+
+Finished. Communication finished in 0.054098 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33582/1/vader_segment.Osamas-MacBook-Pro.501.6e9d0001.3
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33582] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33582] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       1500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.086938 sec.
+
+Finished. Communication finished in 0.07921 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33591/1/vader_segment.Osamas-MacBook-Pro.501.6e840001.4
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33591] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33591] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       2000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.113655 sec.
+
+Finished. Communication finished in 0.106364 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       2500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.136977 sec.
+
+Finished. Communication finished in 0.131474 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33609/1/vader_segment.Osamas-MacBook-Pro.501.6efa0001.5
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33609] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33609] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       3000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.16684 sec.
+
+Finished. Communication finished in 0.157867 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33618/1/vader_segment.Osamas-MacBook-Pro.501.6ee10001.1
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       3500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.196 sec.
+
+Finished. Communication finished in 0.184698 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33627/1/vader_segment.Osamas-MacBook-Pro.501.6ee80001.3
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       4000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.231103 sec.
+
+Finished. Communication finished in 0.222497 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33636/1/vader_segment.Osamas-MacBook-Pro.501.6ed70001.5
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33636] 2 more processes have sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33636] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       4500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.250508 sec.
+
+Finished. Communication finished in 0.239374 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33645/1/vader_segment.Osamas-MacBook-Pro.501.6ede0001.4
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       5000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.266335 sec.
+
+Finished. Communication finished in 0.259224 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33654/1/vader_segment.Osamas-MacBook-Pro.501.6ec50001.1
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       5500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.298843 sec.
+
+Finished. Communication finished in 0.288092 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33663/1/vader_segment.Osamas-MacBook-Pro.501.6ecc0001.3
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       6000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.31668 sec.
+
+Finished. Communication finished in 0.309126 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33674/1/vader_segment.Osamas-MacBook-Pro.501.6e390001.0
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       6500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.348466 sec.
+
+Finished. Communication finished in 0.343785 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33683/1/vader_segment.Osamas-MacBook-Pro.501.6e200001.5
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33683] 2 more processes have sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33683] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       7000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.380357 sec.
+
+Finished. Communication finished in 0.372848 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       7500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.439343 sec.
+
+Finished. Communication finished in 0.431643 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33701/1/vader_segment.Osamas-MacBook-Pro.501.6e160001.6
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33701] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33701] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       8000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.427429 sec.
+
+Finished. Communication finished in 0.418435 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33710/1/vader_segment.Osamas-MacBook-Pro.501.6e1d0001.2
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33710] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33710] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       8500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.461283 sec.
+
+Finished. Communication finished in 0.450998 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       9000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.483244 sec.
+
+Finished. Communication finished in 0.473627 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       9500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.512173 sec.
+
+Finished. Communication finished in 0.50101 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       10000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.524091 sec.
+
+Finished. Communication finished in 0.516313 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33746/1/vader_segment.Osamas-MacBook-Pro.501.6e610001.4
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+
+Dynamic MPI mandelbrot algorithm
+
+usage: ./mandelbrot [options]
+
+OPTIONS:
+    -h                   Shows this help.
+    -c {width}           Width of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -r {height}          Height of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -n {iterations}      Maximum number of iterations for each pixel. Has to be
+                         positive integer (default: 2000)
+    -o {filename}        Filename of resulting bitmap. (default: ./mandelbrot.bmp)
+    -b {blocksize}       Number of rows to be assigned to a slave at once.
+                         Has to be smaller than (height/slave-count).
+                         Has to be a divisor of height. (default: 1)
+    -x {offset}          X-offset from [0,0]. (default: 0)
+    -y {offset}          Y-offset from [0,0]. (default: 0)
+    -a {length}          Absolute value range of x/y-axis, e.g. if length was 2, 
+                         displayed x/y-values would range from -1 to 1. 
+                         If the x/y-offsets are set, axis shifts by those offsets.
+                         Negative value inverts axis.
+                         Has to be non-zero double value. (default: 2)
+    -p {hexnum}          Minimum color of the resulting image. (default: 0x000000)
+    -q {hexnum}          Maximum color of the resulting image. (default: 0xffffff)
+    -m {hexnum}          Hex mask to manipulate color ranges. (default: 0xffffff)
+    -s                   Print progress of the computation.
+
+Error: argument of '-n' has to be greater than zero.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33755/1/vader_segment.Osamas-MacBook-Pro.501.6e680001.4
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[28264,1],2]
+  Exit code:    1
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33755] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33755] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.037229 sec.
+
+Finished. Communication finished in 0.026261 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33765/1/vader_segment.Osamas-MacBook-Pro.501.6e560001.0
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       1000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.061378 sec.
+
+Finished. Communication finished in 0.050199 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33775/1/vader_segment.Osamas-MacBook-Pro.501.6e5c0001.4
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33775] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33775] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       1500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.104999 sec.
+
+Finished. Communication finished in 0.09556 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33785/1/vader_segment.Osamas-MacBook-Pro.501.6e4a0001.0
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33785] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33785] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       2000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.102207 sec.
+
+Finished. Communication finished in 0.095011 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33795/1/vader_segment.Osamas-MacBook-Pro.501.69b00001.0
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33795] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33795] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       2500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.131125 sec.
+
+Finished. Communication finished in 0.122059 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33805/1/vader_segment.Osamas-MacBook-Pro.501.69be0001.3
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33805] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33805] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       3000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.153497 sec.
+
+Finished. Communication finished in 0.145585 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33815/1/vader_segment.Osamas-MacBook-Pro.501.69a40001.6
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33815] 2 more processes have sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33815] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       3500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.17484 sec.
+
+Finished. Communication finished in 0.163437 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33825/1/vader_segment.Osamas-MacBook-Pro.501.69920001.5
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       4000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.199063 sec.
+
+Finished. Communication finished in 0.188958 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33835/1/vader_segment.Osamas-MacBook-Pro.501.69980001.0
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       4500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.225677 sec.
+
+Finished. Communication finished in 0.211131 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33845/1/vader_segment.Osamas-MacBook-Pro.501.69860001.1
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33845] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33845] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       5000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.239194 sec.
+
+Finished. Communication finished in 0.231364 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33855/1/vader_segment.Osamas-MacBook-Pro.501.698c0001.1
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33855] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33855] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       5500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.266102 sec.
+
+Finished. Communication finished in 0.254672 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33865/1/vader_segment.Osamas-MacBook-Pro.501.69fa0001.2
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       6000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.305533 sec.
+
+Finished. Communication finished in 0.296028 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33875/1/vader_segment.Osamas-MacBook-Pro.501.69e00001.5
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33875] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33875] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       6500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.351339 sec.
+
+Finished. Communication finished in 0.340138 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33885/1/vader_segment.Osamas-MacBook-Pro.501.69ee0001.7
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33885] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33885] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       7000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.365883 sec.
+
+Finished. Communication finished in 0.348682 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33895/1/vader_segment.Osamas-MacBook-Pro.501.69d40001.5
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33895] 2 more processes have sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33895] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       7500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.379386 sec.
+
+Finished. Communication finished in 0.370193 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33905/1/vader_segment.Osamas-MacBook-Pro.501.69c20001.6
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       8000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.390329 sec.
+
+Finished. Communication finished in 0.377314 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33917/1/vader_segment.Osamas-MacBook-Pro.501.69ce0001.7
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33917] 2 more processes have sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33917] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       8500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.407572 sec.
+
+Finished. Communication finished in 0.398325 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33927/1/vader_segment.Osamas-MacBook-Pro.501.69340001.2
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33927] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33927] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       9000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.446645 sec.
+
+Finished. Communication finished in 0.441237 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33937/1/vader_segment.Osamas-MacBook-Pro.501.69220001.6
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33937] [[26914,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[Osamas-MacBook-Pro.local:33937] 2 more processes have sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33937] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       9500
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.451155 sec.
+
+Finished. Communication finished in 0.444822 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33947/1/vader_segment.Osamas-MacBook-Pro.501.69280001.1
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33947] 1 more process has sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33947] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       10000
+    blocksize                1
+    image width              1024
+    image height             1024
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.477671 sec.
+
+Finished. Communication finished in 0.467742 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Osamas-MacBook-Pro.local
+  System call: unlink(2) /var/folders/m1/0k6twsp527g_zsb7l9cj7rbr0000gn/T//ompi.Osamas-MacBook-Pro.501/pid.33957/1/vader_segment.Osamas-MacBook-Pro.501.69160001.2
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+[Osamas-MacBook-Pro.local:33957] 3 more processes have sent help message help-opal-shmem-mmap.txt / sys call fail
+[Osamas-MacBook-Pro.local:33957] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 9
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 10
+slots that were requested by the application:
+
+  ./mandelbrot
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------

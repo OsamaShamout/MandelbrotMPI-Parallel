@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/fsociety/Desktop/Senior Year/Spring 2023/CSC447 - Parallel Progg:Multic.&Cluster/Assignment 1/Sequential",
+      "program": "/Users/fsociety/Desktop/Senior Year/Spring 2023/CSC447 - Parallel Progg:Multic.&Cluster/Assignment 1/Sequential/build/Debug/outDebug"
+    }
+  ]
+}

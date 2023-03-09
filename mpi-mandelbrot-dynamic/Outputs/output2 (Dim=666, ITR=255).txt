@@ -1,0 +1,239 @@
+
+Dynamic MPI mandelbrot algorithm
+
+usage: ./mandelbrot [options]
+
+OPTIONS:
+    -h                   Shows this help.
+    -c {width}           Width of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -r {height}          Height of resulting image. Has to be positive integer.
+                         (default: 1024)
+    -n {iterations}      Maximum number of iterations for each pixel. Has to be
+                         positive integer (default: 2000)
+    -o {filename}        Filename of resulting bitmap. (default: ./mandelbrot.bmp)
+    -b {blocksize}       Number of rows to be assigned to a slave at once.
+                         Has to be smaller than (height/slave-count).
+                         Has to be a divisor of height. (default: 1)
+    -x {offset}          X-offset from [0,0]. (default: 0)
+    -y {offset}          Y-offset from [0,0]. (default: 0)
+    -a {length}          Absolute value range of x/y-axis, e.g. if length was 2, 
+                         displayed x/y-values would range from -1 to 1. 
+                         If the x/y-offsets are set, axis shifts by those offsets.
+                         Negative value inverts axis.
+                         Has to be non-zero double value. (default: 2)
+    -p {hexnum}          Minimum color of the resulting image. (default: 0x000000)
+    -q {hexnum}          Maximum color of the resulting image. (default: 0xffffff)
+    -m {hexnum}          Hex mask to manipulate color ranges. (default: 0xffffff)
+    -s                   Print progress of the computation.
+
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       255
+    blocksize                1
+    image width              666
+    image height             666
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.034738 sec.
+
+Finished. Communication finished in 0.0332 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       255
+    blocksize                1
+    image width              666
+    image height             666
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.018046 sec.
+
+Finished. Communication finished in 0.016468 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       255
+    blocksize                1
+    image width              666
+    image height             666
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.018028 sec.
+
+Finished. Communication finished in 0.016443 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       255
+    blocksize                1
+    image width              666
+    image height             666
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.012514 sec.
+
+Finished. Communication finished in 0.010937 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       255
+    blocksize                1
+    image width              666
+    image height             666
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.011331 sec.
+
+Finished. Communication finished in 0.007686 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       255
+    blocksize                1
+    image width              666
+    image height             666
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.011474 sec.
+
+Finished. Communication finished in 0.007991 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       255
+    blocksize                1
+    image width              666
+    image height             666
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.013397 sec.
+
+Finished. Communication finished in 0.008035 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       255
+    blocksize                1
+    image width              666
+    image height             666
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.011483 sec.
+
+Finished. Communication finished in 0.006524 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       255
+    blocksize                1
+    image width              666
+    image height             666
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.034951 sec.
+
+Finished. Communication finished in 0.033417 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
+Computation parameters:
+    output file              ./mandelbrot.bmp
+    maximum iterations       255
+    blocksize                1
+    image width              666
+    image height             666
+    minimum color            0x000000
+    maximum color            0xffffff
+    color mask               0xffffff
+    x-offset                 0
+    y-offset                 0
+    axis length              3.5
+    coordinate system range  [-3.5, 3.5]
+
+Computation started.
+Finished. Computation finished in 0.018099 sec.
+
+Finished. Communication finished in 0.016495 sec.
+
+Creating bitmap image.
+Finished. Image stored in './mandelbrot.bmp'.
